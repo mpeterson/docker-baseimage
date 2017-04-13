@@ -1,6 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER mpeterson <docker@peterson.com.ar>
 
+# Change this ENV variable to skip the docker cache from this line on
+ENV LATEST_CACHE 2017-04-10T13:00+02:00
+
 # Make APT non-interactive
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -8,9 +11,6 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN locale-gen --purge en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
-
-# Change this ENV variable to skip the docker cache from this line on
-ENV LATEST_CACHE 2017-04-10T13:00+02:00
 
 # prevent init scripts from running during install/update
 #  policy-rc.d (for most scripts)
