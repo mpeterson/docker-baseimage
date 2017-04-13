@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER mpeterson <docker@peterson.com.ar>
 
 # Make APT non-interactive
@@ -10,7 +10,7 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
 # Change this ENV variable to skip the docker cache from this line on
-ENV LATEST_CACHE 2014-07-09T23:00-03:00
+ENV LATEST_CACHE 2017-04-10T13:00+02:00
 
 # prevent init scripts from running during install/update
 #  policy-rc.d (for most scripts)
