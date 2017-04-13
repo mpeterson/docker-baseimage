@@ -8,7 +8,6 @@ ENV LATEST_CACHE 2017-04-10T13:00+02:00
 ENV DEBIAN_FRONTEND noninteractive
 
 # Ensure UTF-8
-RUN locale-gen --purge en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
@@ -47,7 +46,10 @@ RUN apt-get update
 RUN apt-get dist-upgrade -y --no-install-recommends
 
 # Install packages needed for this image
-RUN apt-get install -y --no-install-recommends apt-transport-https ca-certificates software-properties-common
+RUN apt-get install -y --no-install-recommends apt-transport-https ca-certificates software-properties-common locales
+
+# Enforce UTF-8 workaround for locale-gen missing from newer ubuntu images
+RUN locale-gen --purge en_US.UTF-8
 
 # This after the package installation so we can use the docker cache
 RUN mkdir /build

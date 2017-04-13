@@ -1,6 +1,6 @@
 AUTHOR=mpeterson
 NAME=base
-VERSION=0.2
+VERSION=0.4
 
 .PHONY: all build tag_latest
 

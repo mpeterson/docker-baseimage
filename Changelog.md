@@ -1,3 +1,6 @@
+## 0.4 (release date: 2017-05-13)
+  * Fix to missing locales in ubuntu:16.04
+
 ## 0.3 (release date: 2017-05-13)
   * Just changing version
 
