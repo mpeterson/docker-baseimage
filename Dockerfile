@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER mpeterson <docker@peterson.com.ar>
 
 # Change this ENV variable to skip the docker cache from this line on
